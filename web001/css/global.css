@@ -1,0 +1,140 @@
+/*Background image*/
+body::before {
+  /*must use a pseudo-element, otherwise having blur in body will blur everthing*/
+  content: "";
+  background-image: url("../images/index/blur.png");
+  /*so the image covers the entire screen*/
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  filter: blur(32px) brightness(0.5);
+  transform: scale(1.3);
+}
+
+.overlay {
+  /*display can be inline-block if .overlay-text also has display inline-block*/
+  display: fit-content;
+  position: absolute;
+  min-width: max-content;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: fit-content;
+  padding-bottom: 600px;
+  background-color: rgba(17, 73, 96, 0.3);
+  z-index: 1;
+}
+
+.overlay-text {
+  /*display: inline-block;*/
+  display: block;
+  width: max-content;
+  color: white;
+  font-size: 75;
+  margin: 50;
+  padding-left: 50;
+  padding-right: 50;
+}
+
+.overlay-text.first {
+  padding-top: 200;
+}
+/*Navigation Bar*/
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+}
+/*For sizing etc */
+.navigation_bar {
+  height: 100px;
+}
+
+/*For the navigation colorscheme*/
+.navigation_container {
+  height: 80px;
+  width: 100%;
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*left: 0;*/
+}
+
+.navigation_logo {
+  font-size: 50px;
+  /*position: absolute;*/
+  /*z-index: 1000;*/
+  padding-left: 30px;
+  color: #0fc5ed;
+}
+
+.navigation_menu {
+  width: 80%;
+  justify-content: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #0fc5ed;
+  display: none;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+/*We want to show the navigation menu when the button is pressed*/
+.navigation_menu.expanded {
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+}
+
+.navigation_item {
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.navigation_link {
+  color: white;
+}
+
+.navigation_bar_border {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  height: 80px;
+  width: 80px;
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+
+.navigation_bar_border.expanded {
+  width: 75%;
+  background-color: rgba(15, 197, 237, 0.7);
+}
+
+.navigation_menu_button {
+  width: 80px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  right: 0;
+}
+
+#navigation_toggle_bars {
+  object-fit: contain;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#navigation_toggle_bars.expanded {
+  color: white;
+}
