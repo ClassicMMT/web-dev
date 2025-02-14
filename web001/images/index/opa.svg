@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120.19406mm"
+   height="65.117554mm"
+   viewBox="0 0 120.19406 65.117554"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    path, ellipse, rect {
+      fill: white !important;
+      stroke: white !important;
+      z-index: 2000;
+    }
+  </style>
+  <defs id="defs1" />
+  <g
+     id="layer2"
+     style="opacity:1;fill:currentColor;stroke:currentColor;stroke-opacity:1"
+     transform="translate(-54.761672,-94.978807)">
+    <path
+       style="fill:currentColor;fill-opacity:0;stroke:currentColor;stroke-width:5;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+       d="m 152.82632,97.478807 h 19.62941 v 14.955733"
+       id="path5" />
+    <path
+       style="fill:currentColor;fill-opacity:0;stroke:currentColor;stroke-width:5;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+       d="m 76.900285,157.59638 -19.62927,-0.0735 0.056,-14.95563"
+       id="path5-4" />
+  </g>
+  <g
+     id="layer1"
+     style="mix-blend-mode:normal"
+     transform="translate(-54.761672,-94.978807)">
+    <ellipse
+       style="fill:currentColor;fill-opacity:0.011583;stroke:currentColor;stroke-width:5.41473;stroke-dasharray:none;stroke-opacity:1"
+       id="path1"
+       cx="80.3564"
+       cy="128.03671"
+       rx="12.448431"
+       ry="14.036696" />
+    <ellipse
+       style="fill:currentColor;fill-opacity:0.011583;stroke:currentColor;stroke-width:5.41473;stroke-dasharray:none;stroke-opacity:1"
+       id="path1-3"
+       ry="14.036696"
+       rx="12.448431"
+       cy="128.28481"
+       cx="115.21268" />
+    <ellipse
+       style="fill:currentColor;fill-opacity:0.011583;stroke:currentColor;stroke-width:5.41473;stroke-dasharray:none;stroke-opacity:1"
+       id="path1-2"
+       cx="150.32309"
+       cy="128.23096"
+       rx="12.448431"
+       ry="14.036696" />
+    <rect
+       style="fill:currentColor;fill-opacity:0.366795;stroke:currentColor;stroke-width:4.89877;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2"
+       width="0.51360315"
+       height="22.150965"
+       x="102.50608"
+       y="130.35492" />
+    <rect
+       style="fill:currentColor;fill-opacity:0.011583;stroke:currentColor;stroke-width:4.60194;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-3"
+       width="0.80878222"
+       height="12.413767"
+       x="162.36465"
+       y="130.31329" />
+  </g>
+</svg>
