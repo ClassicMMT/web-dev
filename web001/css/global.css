@@ -187,11 +187,13 @@ body::before {
   transition: all 0.5s ease;
 }
 
-.card h3 {
+.card a {
   font-size: 40;
   text-align: center;
   color: #fff;
   min-width: 200px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #card1 {
