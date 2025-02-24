@@ -1,0 +1,131 @@
+body {
+  background-color: #03c6fc;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 8rem;
+  position: absolute;
+  top: 4rem;
+  text-decoration: underline;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* container which holds everything */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+}
+
+/* container for words to type */
+.words-display {
+  width: calc(100% - 30px);
+  height: 5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  padding: 10px;
+  padding-left: 15px;
+  background-color: #fff;
+  align-content: center;
+  word-spacing: -8px;
+}
+
+.words-display span {
+  display: inline-block;
+  word-break: break-word;
+}
+
+/* fonts for display and input boxes */
+.words-input,
+.words-display {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+
+/* container containing the input box and timer */
+.input-timer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  max-width: 700px;
+  background-color: #c0c0c0;
+  border-radius: 20px;
+}
+
+/* Box containing the typed word */
+.words-input {
+  align-content: center;
+  width: 80%;
+  margin-left: 7px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  border-radius: 16px;
+  border-color: transparent;
+}
+
+/* timer styling */
+#timer {
+  display: flex;
+  flex-direction: row;
+  background-color: #4d7e99;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.timer {
+  font-size: 3rem;
+}
+
+/* styling display words */
+span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.highlight {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.highlight-incorrect {
+  background-color: #f00;
+}
+
+.wpm {
+  position: fixed;
+  text-align: center;
+  font-size: 10rem;
+  background-color: #4d7e99;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+/* Special classes */
+.hidden {
+  color: transparent;
+  display: none;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
