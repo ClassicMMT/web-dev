@@ -11,13 +11,30 @@ let numberWordsCorrect = 0;
 let capitaliseProbability = 0;
 
 inputDisplay.addEventListener("keydown", (event) => {
+  // disable enter and arrow keys
+  if (
+    ["Enter", "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(
+      event.key,
+    )
+  ) {
+    event.preventDefault();
+    return;
+  }
+
   const wordToType = document.getElementById(index);
-  const typedInput = inputDisplay.value.trimEnd();
+  let typedInput = inputDisplay.value;
+  // adding event.key is necessary since we're using the keydown event, and typedInput does not contain the event key yet
+  if (event.key != " " && event.key != "Backspace") {
+    typedInput += event.key;
+  } else if (event.key === "Backspace") {
+    typedInput = typedInput.slice(0, -1);
+  }
   const doesMatch = evaluateInput(wordToType.innerText, typedInput);
 
   // start the timer if it hasn't started
   if (timerInterval === undefined) startTimer();
 
+  // if the key is space, we commit the word, otherwise we check if the typed input is valid
   if (event.key === " ") {
     // prevent space from being added to the input
     event.preventDefault();
@@ -26,6 +43,7 @@ inputDisplay.addEventListener("keydown", (event) => {
     // check if word was correct
     if (doesMatch && wordToType.innerText.length === typedInput.length) {
       wordToType.classList.add("correct");
+      wordToType.classList.remove("highlight-incorrect");
       numberWordsCorrect++;
     } else {
       wordToType.classList.add("incorrect");
@@ -52,6 +70,9 @@ inputDisplay.addEventListener("keydown", (event) => {
 
 // BACKEND
 function evaluateInput(wordToType, typedInput) {
+  // sometimes the " " key will be passed since we're using keydown events
+  typedInput = typedInput.trimEnd();
+  console.log(wordToType, typedInput);
   // Case 1: typedInput is longer, thus incorrect
   if (typedInput.length > wordToType.length) {
     return false;
@@ -127,10 +148,11 @@ function startTimer() {
   timerInterval = setInterval(() => {
     updateTimer();
     // if the time has ended, stop the timer and run end functions
-    if (timeRemaining < 0) {
+    if (timeRemaining < 60) {
       clearInterval(timerInterval);
       hideDisplays();
       showWPM();
+      showRestartButton();
       displayConfetti();
     }
   }, 1000);
@@ -226,6 +248,11 @@ function hideDisplays() {
   document.getElementById("inputTimerContainer").classList.add("hidden");
   wordsDisplay.classList.add("hidden");
   inputDisplay.classList.add("hidden");
+}
+
+function showRestartButton() {
+  const restartButton = document.getElementById("restart");
+  restartButton.classList.remove("hidden");
 }
 
 function showWPM() {

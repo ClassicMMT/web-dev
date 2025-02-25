@@ -14,7 +14,7 @@
       <h1>Typing Test</h1>
       <div id="wordsDisplay" class="words-display"></div>
       <div class="input-timer-container" id="inputTimerContainer">
-        <textarea id="wordsInput" class="words-input" autofocus></textarea>
+        <input id="wordsInput" class="words-input" autofocus type="text"></input>
         <div class="timer" id="timer">
           <div class="timer" id="minutes">1</div>
           <div class="timer" id="colon">:</div>
@@ -23,5 +23,6 @@
       </div>
     </div>
     <div class="wpm hidden" id="wpm"></div>
+    <button class="hidden" id="restart" onclick="window.location.reload()">Try Again?</button>
   </body>
 </html>
